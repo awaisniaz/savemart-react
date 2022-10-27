@@ -1,0 +1,19 @@
+.carousel-container {
+    margin-top: 85px;
+}
+
+.carousel-caption h3,
+.carousel-caption p {
+    color: var(--primary-color) !important;
+}
+
+.carousel-indicators button {
+    background-color: var(--primary-color) !important;
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 50% !important;
+}
+
+.carousel-indicators .active {
+    color: var(--secondary-color);
+}

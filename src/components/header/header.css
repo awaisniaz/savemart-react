@@ -1,0 +1,21 @@
+@import url('../../App.css');
+.header-container .fixed-top {
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.brand-txt a {
+    font-size: 40px;
+    text-decoration: none;
+    color: var(--primary-color) !important;
+}
+
+.navbar-nav a {
+    color: var(--secondary-color) !important;
+    text-decoration: none !important;
+    font-size: 16px !important;
+    padding: 10px;
+}
+
+.navbar-nav a:hover {
+    color: var(--primary-color) !important;
+}
