@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import './style.css'
 import { carousaldata } from '../../configurations/carousal'
 
+
 function ControlledCarousel() {
     const [index, setIndex] = useState(0);
 
