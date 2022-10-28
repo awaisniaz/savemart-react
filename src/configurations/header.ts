@@ -8,11 +8,20 @@ interface headerelement {
 }
 
 export const headers: headerelement[] = [{
-    name: 'Home',
+    name: 'Clothes',
     url: '/home'
 
 }, {
-    name: 'Marketplace',
+    name: 'Shoes',
     url: '/marketplace'
-}
+}, {
+    name: 'Electronics',
+    url: '/marketplace'
+}, {
+    name: 'Mobiles',
+    url: '/marketplace'
+}, {
+    name: 'Consmatics',
+    url: '/marketplace'
+},
 ]
