@@ -27,7 +27,7 @@ function Header() {
                     </Col>
                     <Col lg={3}>
                         <div className='user-action'>
-                            <button className='user-login'>Login</button>
+                            <Link className='user-login' to={'/login'}>LOGIN</Link>
                         </div>
                     </Col>
                 </Row>
