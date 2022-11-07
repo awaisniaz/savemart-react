@@ -1,26 +1,42 @@
 
 import './styles.css'
 import { products } from '../../configurations/product';
+import { useState } from 'react';
+import { Pagination } from 'antd';
+import type { PaginationProps } from 'antd';
+import Card from './card';
+import { motion } from "framer-motion"
 
-const Productcard: React.FC = () => (
-    <div className='container'>
-        {products?.map((item: any, index: any) => (
-            <div className="card">
+const Productcard: React.FC = () => {
 
-                <div className="imgBox">
-                    <img src="https://www.corsair.com/corsairmedia/sys_master/productcontent/CH-9300011-NA-M65_PRO_RGB_BLK_04.png" alt="mouse corsair" className="mouse" />
-                </div>
+    // State Managment Portion
+    const [lowerLimit, setLowerLimit] = useState<number>(0)
+    const [upperLimit, setUpperLimit] = useState<number>(12)
+    const [loading, setLoading] = useState<boolean>(true)
+    const count = 12
 
-                <div className="contentBox">
-                    <h3>Mouse Corsair M65</h3>
-                    <h2 className="price">61.<small>98</small> €</h2>
-                    <a href="/" className="buy">Buy Now</a>
-                </div>
+    //  End of State Management
 
-            </div>
-        ))}
+
+
+    const onChange: PaginationProps['onChange'] = pageNumber => {
+        let nextCounter = pageNumber - 1
+        setLowerLimit(nextCounter * count)
+        setUpperLimit(pageNumber * count)
+
+    };
+
+
+    return <><div className='container'>
+        {products?.slice(lowerLimit, upperLimit)?.map((item: any, index: any) => {
+            return <Card item={item} loading={loading} />
+        })
+        }
+
     </div>
+        <Pagination defaultCurrent={1} total={products?.length} onChange={onChange} />
+    </>
 
-);
+};
 
 export default Productcard

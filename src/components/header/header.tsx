@@ -15,17 +15,17 @@ function Header() {
         <Affix>
             <Container fluid className='header-container'>
                 <Row>
-                    <Col lg={2} >
+                    <Col lg={2} md={4} sm={4} xs={4}>
                         <h1 className='brand-txt'><Link to={'/home'}>Amazon</Link></h1>
                     </Col>
-                    <Col lg={7}>
+                    <Col lg={7} md={4} sm={4} xs={4}>
                         <div className='search-box'>
                             <input placeholder='Search the Products ...'></input>
                             <button className='search-btn'><FontAwesomeIcon icon={faSearch as IconProp} /></button>
 
                         </div>
                     </Col>
-                    <Col lg={3}>
+                    <Col lg={3} md={4} sm={4} xs={4}>
                         <div className='user-action'>
                             <Link className='user-login' to={'/login'}>LOGIN</Link>
                         </div>
