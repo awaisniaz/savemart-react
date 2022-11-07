@@ -6,7 +6,6 @@ import Signup from './login/signup';
 const Systemrouting = () => {
     return <Routes>
         <Route path="/" element={<Home />} />
-        < Route path="/about" element={<p>About</p>} ></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
 
